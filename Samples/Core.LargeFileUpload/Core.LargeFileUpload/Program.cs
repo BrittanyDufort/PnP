@@ -34,7 +34,7 @@ namespace Contoso.Core.LargeFileUpload
             try
             {
                 // Works for smaller files and will cause an exception now
-                new FileUploadService().UploadDocumentContent(ctx, "Docs", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile1.pptx"));
+                new FileUploadService().UploadDocumentContent(ctx, "SlalomDev", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile1.pptx"));
             }
             catch (Exception ex)
             {
@@ -50,11 +50,11 @@ namespace Contoso.Core.LargeFileUpload
             try
             {
                 // Alternative 1 for uploading large files 
-                new FileUploadService().SaveBinaryDirect(ctx, "Docs", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile1.pptx"));
+                new FileUploadService().SaveBinaryDirect(ctx, "SlalomDev", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile1.pptx"));
                 // Alternative 2 for uploading large files
-                new FileUploadService().UploadDocumentContentStream(ctx, "Docs", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile2.pptx"));
+                new FileUploadService().UploadDocumentContentStream(ctx, "SlalomDev", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile2.pptx"));
                 // Alternative 3 for uploading large files: slice per slice which allows you to stop and resume a download
-                new FileUploadService().UploadFileSlicePerSlice(ctx, "Docs", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile3.pptx"), 1);
+                new FileUploadService().UploadFileSlicePerSlice(ctx, "SlalomDev", Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "SP2013_LargeFile3.pptx"), 1);
             }
             catch (Exception ex)
             {
